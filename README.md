@@ -1,25 +1,32 @@
-# Catchpedia - Your Complete Fishing Resource
+# Catchpedia - Your Complete Fishing Resource 🎣
 
-A modern, Wikipedia-style fishing encyclopedia built with Next.js, featuring clean routing, SEO optimization, and a responsive design optimized for long reading sessions.
+A modern, Wikipedia-style fishing encyclopedia built with Next.js, featuring clean routing, user authentication, article submission system, and a responsive design optimized for long reading sessions.
 
-## Features
+## ✨ Features
 
 - **Clean URL Structure**: Each category has its own route (e.g., `/locations`, `/fish`, `/fishing-rods`)
-- **Article Pages**: Full article content with unique URLs (e.g., `/fish/bluefin-tuna`)
+- **Article Pages**: Full article content with unique URLs and rich text editing
+- **User Authentication**: Sign up, login, and user account management
+- **Article Submission**: Users can submit articles for review
+- **Admin Panel**: Content management and article approval system
+- **Search Functionality**: Full-text search across all articles
 - **Wikipedia-Style Design**: Clean, minimal styling optimized for reading
-- **SEO-Friendly**: Proper meta tags, structured data, and indexable routes
 - **Responsive Design**: Works perfectly on all devices
-- **Fast Performance**: Built with Next.js for optimal speed
+- **Rich Text Editor**: WYSIWYG editor for article creation and editing
+- **Image Gallery**: Upload and manage images for articles
+- **Breadcrumb Navigation**: Easy navigation between categories and articles
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS with Typography plugin
-- **Fonts**: Inter (Google Fonts)
-- **Icons**: Heroicons (SVG)
+- **Styling**: Custom CSS with CSS Variables
+- **Authentication**: JWT with bcryptjs
+- **Data Storage**: localStorage (client-side)
+- **Icons**: Font Awesome
+- **Image Handling**: Base64 encoding
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -30,26 +37,56 @@ A modern, Wikipedia-style fishing encyclopedia built with Next.js, featuring cle
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/misakipls/catchpedia.git
    cd catchpedia
    ```
 
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-3. **Run the development server**
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   ADMIN_PASSWORD=your_admin_password_here
+   JWT_SECRET=your_jwt_secret_here
+   BCRYPT_SALT_ROUNDS=10
+   ```
+
+4. **Run the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🔐 Authentication
+
+### User Accounts
+- **Sign Up**: Create a new user account at `/auth/signup`
+- **Login**: Access your account at `/auth/login`
+- **Account Page**: Manage your profile at `/account`
+
+### Admin Access
+- **Admin Login**: Access admin panel at `/admin`
+- **Default Password**: Set in `.env.local` file
+- **Admin Features**: Article management, user submissions, content approval
+
+## 📝 Content Management
+
+### For Users
+- **Submit Articles**: Use the submission form at `/submit`
+- **Rich Text Editor**: Full WYSIWYG editing capabilities
+- **Image Uploads**: Add images to your articles
+- **Category Selection**: Choose appropriate categories and subcategories
+
+### For Admins
+- **Dashboard**: Overview of all content at `/admin/dashboard`
+- **Article Management**: Edit, approve, or reject submissions
+- **Pending Articles**: Review user-submitted content
+- **Content Editing**: Full editing capabilities with rich text editor
 
 ## Project Structure
 
@@ -212,7 +249,44 @@ The app can be deployed to any platform that supports Next.js:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Support
+## 🎯 Current Project Status
+
+### ✅ Completed Features
+- [x] Homepage with category navigation
+- [x] All category pages (locations, waters, fish, gear categories)
+- [x] Article display and routing
+- [x] User authentication system (signup/login)
+- [x] Article submission system
+- [x] Admin panel with content management
+- [x] Rich text editor for content creation
+- [x] Image upload and gallery system
+- [x] Search functionality
+- [x] Responsive design
+- [x] Breadcrumb navigation
+- [x] Git version control setup
+
+### 🚧 Future Enhancements
+- [ ] Database integration (PostgreSQL/MongoDB)
+- [ ] User profiles and article history
+- [ ] Comment system
+- [ ] Article rating and reviews
+- [ ] Advanced search filters
+- [ ] Mobile app
+- [ ] API for third-party integrations
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
 
 If you have any questions or need help:
 - Create an issue on GitHub
@@ -222,3 +296,5 @@ If you have any questions or need help:
 ---
 
 **Happy Fishing! 🎣**
+
+*Built with ❤️ for the fishing community*
